@@ -40,7 +40,7 @@ class Game {
 
     update() {
         this.y += this.dy;
-        if (this.y + birdElement.rad > gameContainer.clientHeight || this.y - this.radius < 0) {
+        if (this.y + this.radius > gameContainer.clientHeight || this.y - this.radius < 0) {
             this.dy = -this.dy;
         }
         birdElement.style.top = `${this.y - this.radius}px`;
